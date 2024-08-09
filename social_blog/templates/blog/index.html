@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}
+Meme_Zone, осторожно, у Нас смешно!
+{% endblock %}
+{% block content %}
+  {% for post in page_obj %}
+    <article class="mb-5">
+      {% include "includes/post_card.html" %}
+    </article>
+  {% endfor %}
+  {% include "includes/paginator.html" %}
+{% endblock %}
